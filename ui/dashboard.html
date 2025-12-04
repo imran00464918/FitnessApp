@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness App — UI Mockup</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #f5f7fb;
+            color: #111827;
+        }
+        .top-bar {
+            height: 56px;
+            background-color: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+        }
+        .top-bar-title {
+            font-weight: 600;
+        }
+        .container {
+            padding: 24px 40px;
+        }
+        h1 {
+            font-size: 22px;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+        }
+        .nav-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .nav-tab {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background-color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .nav-tab.active {
+            background-color: #111827;
+            color: white;
+            border-color: #111827;
+        }
+        .cards-row {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            flex: 1;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(15,23,42,0.08);
+            padding: 18px 20px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .subgrid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .small-card {
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+        }
+        .label {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        .value {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .value-status {
+            color: #b45309;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .meal-item-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .meal-line {
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .muted {
+            color: #6b7280;
+            font-size: 12px;
+        }
+        ul {
+            margin: 6px 0 0 16px;
+            padding: 0;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-title">Fitness App — UI Mockup</div>
+</div>
+
+<div class="container">
+
+    <div class="nav-tabs">
+        <button class="nav-tab active">Home</button>
+        <button class="nav-tab">Log Meal</button>
+        <button class="nav-tab">Log Workout</button>
+        <button class="nav-tab">Daily Goal</button>
+        <button class="nav-tab">History</button>
+    </div>
+
+    <h1>Today at a glance</h1>
+
+    <div class="cards-row">
+        <!-- Today summary -->
+        <div class="card">
+            <div class="card-title">Today at a glance</div>
+            <div class="subgrid">
+                <div class="small-card">
+                    <div class="label">Calories Burned</div>
+                    <div class="value">325 kcal</div>
+                </div>
+                <div class="small-card">
+                    <div class="label">Calories Intake</div>
+                    <div class="value">536 kcal</div>
+                </div>
+                <div class="small-card">
+                    <div class="label">Target</div>
+                    <div class="value">500 kcal</div>
+                </div>
+                <div class="small-card">
+                    <div class="label">Status</div>
+                    <div class="value-status">Below target</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent meal -->
+        <div class="card">
+            <div class="card-title">Recent Meal</div>
+            <div class="meal-item-title">Lunch</div>
+            <div class="muted">1 item</div>
+        </div>
+
+        <!-- Workout session -->
+        <div class="card">
+            <div class="card-title">Workout Session</div>
+            <div class="muted">Push + Run</div>
+            <ul>
+                <li><b>Bench Press</b> — set 1, reps 10, 40kg</li>
+                <li><b>Bench Press</b> — set 2, reps 8, 50kg</li>
+                <li><b>Back Squat</b> — set 1, reps 8, 70kg</li>
+                <li class="muted">+1 more…</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
